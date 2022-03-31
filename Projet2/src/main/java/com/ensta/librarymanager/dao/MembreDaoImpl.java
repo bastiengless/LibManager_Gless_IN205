@@ -13,6 +13,17 @@ import com.ensta.librarymanager.modele.Abonnement;
 import com.ensta.librarymanager.persistence.ConnectionManager;
 
 public class MembreDaoImpl implements MembreDao {
+	
+	private static MembreDaoImpl instance;
+	
+	private MembreDaoImpl() {}
+	
+	public static MembreDaoImpl getInstance() {
+		if (instance == null) {
+			instance = new MembreDaoImpl();
+		}
+		return instance;
+	}
 
 	@Override
 	public List<Membre> getList() throws DaoException {
