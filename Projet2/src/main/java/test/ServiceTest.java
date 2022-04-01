@@ -6,7 +6,7 @@ import com.ensta.librarymanager.dao.EmpruntDaoImpl;
 import com.ensta.librarymanager.dao.LivreDaoImpl;
 import com.ensta.librarymanager.exception.DaoException;
 
-public class DaoTest {
+public class ServiceTest {
 	public static void main(String[] args) {
 		EmpruntDaoImpl e = EmpruntDaoImpl.getInstance();
 		LivreDaoImpl l = LivreDaoImpl.getInstance();

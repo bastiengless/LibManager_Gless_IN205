@@ -1,6 +1,5 @@
 package com.ensta.librarymanager.modele;
 
-// import com.ensta.librarymanager.modele.Abonnement;
 
 public class Membre {
 	private int id;

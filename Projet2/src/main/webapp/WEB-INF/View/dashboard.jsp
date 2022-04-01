@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <%@ page pageEncoding="UTF-8" %>
   <jsp:include page='menu.jsp'></jsp:include>
   <main>
     <section class="content">
@@ -23,7 +24,7 @@
         <div class="col l4 s6">
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>12</h3> <!-- TODO : afficher le nombre de membres à la place de 12 -->
+              <h3><%= req.getAttribute("nMembres") %></h3> <!-- TODO : afficher le nombre de membres ï¿½ la place de 12 -->
               <p>Membres</p>
             </div>
             <div class="icon">
@@ -35,7 +36,7 @@
         <div class="col l4 s6">
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>27</h3> <!-- TODO : afficher le nombre de livres à la place de 27 -->
+              <h3>${nLivres}</h3> <!-- TODO : afficher le nombre de livres ï¿½ la place de 27 -->
               <p>Livres</p>
             </div>
             <div class="icon">
@@ -47,7 +48,7 @@
         <div class="col l4 s6">
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>1515</h3> <!-- TODO : afficher le nombre d'emprunts à la place de 1515 -->
+              <h3>${nEmprunts}</h3> <!-- TODO : afficher le nombre d'emprunts ï¿½ la place de 1515 -->
               <p>Emprunts</p>
             </div>
             <div class="icon">
@@ -72,7 +73,7 @@
                 
                     <tr>
                         <td>Titre du livre, <em>de Nom de l'auteur</em></td>
-                        <td>Prénom et nom du membre emprunteur</td>
+                        <td>Prï¿½nom et nom du membre emprunteur</td>
                         <td>Date de l'emprunt</td>
                         <td>
                             <a href="emprunt_return?id=idDeLEmprunt"><ion-icon class="table-item" name="log-in"></a>
